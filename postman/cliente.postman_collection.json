@@ -1,0 +1,392 @@
+{
+	"info": {
+		"name": "cliente",
+		"_postman_id": "4bdb4649-ccea-5905-d659-027b75d9d22c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clienteGet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "Lista todos os clientes"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteGet1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"1"
+					]
+				},
+				"description": "Pega o primeiro cliente cadastrado"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteGet0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/clientes/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"0"
+					]
+				},
+				"description": "Tenta pegar um cliente inexistente"
+			},
+			"response": []
+		},
+		{
+			"name": "clientePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "testes",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "776655",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						""
+					]
+				},
+				"description": "Cadastra um novo cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteDelete0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "testes",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "776655",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/0/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"0",
+						""
+					]
+				},
+				"description": "Tenta excluir uma instancia de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteDelete0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "testes",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "776655",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/0/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"0",
+						""
+					]
+				},
+				"description": "Tenta excluir uma instancia de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteDelete1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "testes",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "776655",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"1",
+						""
+					]
+				},
+				"description": "exclui uma instancia de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteAtualiza1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "testes",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "776655444",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"1",
+						""
+					]
+				},
+				"description": "Atualiza uma instancia de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteAtualiza0",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "testes",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "776655444",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/0/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"0",
+						""
+					]
+				},
+				"description": "Tenta atualizar uma instancia inexistente"
+			},
+			"response": []
+		},
+		{
+			"name": "clienteAtualiza1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "login",
+							"value": "blabla",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9998877",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "teste@abc.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/clientes/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clientes",
+						"1",
+						""
+					]
+				},
+				"description": "Tenta atualizar uma instancia inexistente"
+			},
+			"response": []
+		}
+	]
+}
