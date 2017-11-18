@@ -1,3 +1,5 @@
+import json
+from urllib import parse as urlparse
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
@@ -37,7 +39,12 @@ def cliente_detail(request, pk):
         return JsonResponse(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = ClienteSerializer(cliente, data=request.data)
+        data = json.dumps(urlparse.parse_qs(request.body.decode('utf-8')))
+        d1 = data.replace('[',"")
+        d1 = d1.replace(']',"")
+        print('Raw Data: "%s"' % d1)
+        saida = json.loads(d1)
+        serializer = ClienteSerializer(cliente, data=saida)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, status=204)
