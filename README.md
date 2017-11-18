@@ -14,7 +14,7 @@ Ao logar com sucesso criar um novo banco de dados
 sql
 CREATE DATABASE clientes;
 ```
-##Configuração da aplicação
+## Configuração da aplicação
 Supondo que possui o *virtualenv* e *pip* instalados
 ```
 bash
