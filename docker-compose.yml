@@ -8,6 +8,11 @@ services:
       MYSQL_DATABASE: clientes
       MYSQL_USER: root
       MYSQL_PASSWORD: admin
+  migration:
+    build: .
+    command: python3 manage.py migrate --noinput
+    volumes:
+      - .:/cliente
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
@@ -16,4 +21,5 @@ services:
     ports:
       - "8000:8000"
     depends_on:
+      - migration
       - db

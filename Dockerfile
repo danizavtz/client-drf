@@ -4,5 +4,5 @@ RUN mkdir /cliente
 WORKDIR /cliente
 ADD requirements/common.txt /cliente/
 ADD requirements/dev.txt /cliente/
-RUN pip install -r requirements/dev.txt
-ADD . /cliente/
+ADD . /cliente
+RUN pip install -r /cliente/dev.txt
