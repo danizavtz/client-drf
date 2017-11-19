@@ -55,3 +55,25 @@ deverá retornar um []
 
 ## Postman
 Os arquivos do postman estão na pasta postman, carregar eles no postman e fazer as requisições para verificar o funcionamento da api.
+
+## Docker & docker-compose
+Existe uma configuração para uso com docker e docker-compose
+para isso basta mudar para a branch --> docker
+```
+Bash
+$ git checkout docker
+```
+Desativar todas as instâncias mysql
+```
+Bash
+$ sudo service mysql stop #para todas as instâncias
+$ sudo service mysql status # certifica-se que ela não está em execução
+```
+Agora é só ativar as imagens
+```
+Bash
+$ docker-compose build
+$ docker-compose up
+```
+Para finalizar a execução do docker basta sair com ctrl+c
+Para manter o serviço em segundo plano basta rodar  docker-compose up -d
