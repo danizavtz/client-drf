@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+  nginx:
+    image: nginx:latest
+    ports: 
+      - "8000:8000"
+    volumes:
+      - .:/cliente
+      - ./config:/etc/nginx/conf.d
+    depends_on:
+      - web
   db:
     image: mysql:latest
     environment:
@@ -18,8 +27,8 @@ services:
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/cliente
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     depends_on:
       - migration
       - db
