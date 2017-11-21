@@ -1,6 +1,6 @@
 [![Django Logo](https://realpython.com/learn/start-django/img/django-logo-positive.png)](https://www.djangoproject.com/)
 ## client-drf
-Client Django Rest Api
+Cliente Django Rest Api, este projeto possui um par equivalente a esse projeto escrito em node [cliente-node](https://github.com/danizavtz/cliente-node) fiz esse projeto a fim de comparar duas implementações de uma restful api escrito em django usando o rest-framework e usando express.
 
 ## Preparação do Ambiente
 
