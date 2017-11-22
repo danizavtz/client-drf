@@ -4,6 +4,8 @@ RUN mkdir /config
 COPY ./config /config
 RUN mkdir /cliente
 WORKDIR /cliente
+RUN apt-get update && apt-get install -y \
+python3-dev
 ADD requirements/common.txt /cliente/
 ADD requirements/dev.txt /cliente/
 ADD . /cliente

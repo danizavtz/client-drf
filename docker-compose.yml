@@ -24,7 +24,7 @@ services:
       - .:/cliente
   web:
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: /usr/local/bin/gunicorn client.wsgi:application -w2 -b:8000
     volumes:
       - .:/cliente
     expose:
