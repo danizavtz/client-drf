@@ -12,17 +12,18 @@ def cliente_list(request):
     """
     Lista todos os Clientes ou cria um novo.
     """
-    if request.method == 'GET':
-        clientes = Cliente.objects.all()
-        serializer = ClienteSerializer(clientes,many=True)
-        return JsonResponse(serializer.data, safe=False)
+    if request.method == 'POST':
+        return criar_cliente(request)
+    clientes = Cliente.objects.all()
+    serializer = ClienteSerializer(clientes,many=True)
+    return JsonResponse(serializer.data, safe=False)
 
-    elif request.method == 'POST':
-        serializer = ClienteSerializer(data=request.POST)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+def criar_cliente(request):
+    serializer = ClienteSerializer(data=request.POST)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse(serializer.data, status=201)
+    return JsonResponse(serializer.errors, status=400)
 
 @csrf_exempt
 def cliente_detail(request, pk):
